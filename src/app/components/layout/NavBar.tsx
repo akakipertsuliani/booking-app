@@ -1,6 +1,6 @@
 export default function Navbar() {
   return (
-    <nav className="absolute w-screen border-b">
+    <nav className="absolute w-full border-b">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         
         <div className="flex text-xl font-bold gap-16">

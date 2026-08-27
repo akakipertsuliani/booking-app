@@ -1,3 +1,4 @@
+import BarbersPage from "./components/barbers/page";
 import NavBar from "./components/layout/NavBar";
 import HaircutSlideshow from "./components/UI/HaircutSlideshow";
 
@@ -6,7 +7,7 @@ export default function Home() {
 		<main className="h-screen bg-[#FFF5EE]">
 			<NavBar />
 			<section className="mx-auto min-h-screen max-w-screen flex items-center justify-center gap-10 px-6 py-20">
-				<div className="max-w-3xl" >
+				<div className="max-w-3xl">
 					<h1 className="text-5xl font-semibold tracking-[-0.03em] text-zinc-950 sm:text-6xl">
 						FIND YOUR NEXT HAIRCUT
 					</h1>
@@ -21,8 +22,9 @@ export default function Home() {
 						</button>
 					</div>
 				</div>
-        <HaircutSlideshow />
+				<HaircutSlideshow />
 			</section>
+			<BarbersPage />
 		</main>
 	);
 }
