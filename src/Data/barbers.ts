@@ -9,6 +9,7 @@ export type Barber = {
 	id: number;
 	name: string;
 	rating: number;
+	location: string;
 	address: string;
 	image: string;
 	services: Service[];
@@ -19,7 +20,8 @@ export const barbers: Barber[] = [
 		id: 1,
 		name: "Alex Barber",
 		rating: 4.9,
-		address: "Kutaisi",
+		location: "City Center",
+		address: "12 Rustaveli Street",
 		image: "/HairCut/HairCut_1.jpg",
 		services: [
 			{
@@ -34,12 +36,6 @@ export const barbers: Barber[] = [
 				price: 30,
 				duration: 40,
 			},
-			{
-				id: 3,
-				name: "Hair + Beard",
-				price: 40,
-				duration: 55,
-			},
 		],
 	},
 
@@ -47,42 +43,32 @@ export const barbers: Barber[] = [
 		id: 2,
 		name: "Nika Barber",
 		rating: 4.8,
-		address: "Kutaisi",
+		location: "Bagrati",
+		address: "8 Bagrati Street",
 		image: "/HairCut/HairCut_4.jpg",
 		services: [
 			{
-				id: 4,
+				id: 3,
 				name: "Classic Cut",
 				price: 20,
 				duration: 30,
-			},
-			{
-				id: 5,
-				name: "Beard Trim",
-				price: 15,
-				duration: 20,
 			},
 		],
 	},
 
-    {
+	{
 		id: 3,
-		name: "Anna Barber",
-		rating: 4.9,
-		address: "Kutaisi",
-		image: "/HairCut/HairCut_2.jpg",
+		name: "Giorgi Barber",
+		rating: 4.7,
+		location: "City Center",
+		address: "24 Rustaveli Street",
+		image: "/HairCut/HairCut_5.jpg",
 		services: [
 			{
 				id: 4,
-				name: "Classic Cut",
-				price: 20,
-				duration: 30,
-			},
-			{
-				id: 5,
-				name: "Beard Trim",
-				price: 15,
-				duration: 20,
+				name: "Hair + Beard",
+				price: 35,
+				duration: 50,
 			},
 		],
 	},
