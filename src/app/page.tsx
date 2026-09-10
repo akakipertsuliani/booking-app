@@ -1,4 +1,5 @@
 import BarbersPage from "./components/barbers/page";
+import BookingPage from "./components/Booking/page";
 import NavBar from "./components/layout/NavBar";
 import HaircutSlideshow from "./components/UI/HaircutSlideshow";
 
@@ -46,6 +47,7 @@ export default function Home() {
 				<HaircutSlideshow />
 			</section>
 			<BarbersPage />
+			<BookingPage />
 		</main>
 	);
 }
