@@ -1,53 +1,29 @@
-import BarbersPage from "./components/barbers/page";
-import BookingPage from "./components/Booking/page";
-import NavBar from "./components/layout/NavBar";
-import HaircutSlideshow from "./components/UI/HaircutSlideshow";
-
-const services = [
-  {
-    name: "Classic Cut",
-    description: "Clean, timeless and tailored to you.",
-    price: "25 GEL",
-    duration: "30 min",
-  },
-  {
-    name: "Skin Fade",
-    description: "Sharp fade with a clean modern finish.",
-    price: "30 GEL",
-    duration: "40 min",
-  },
-  {
-    name: "Hair + Beard",
-    description: "Complete cut and beard refinement.",
-    price: "40 GEL",
-    duration: "55 min",
-  },
-];
+import Link from "next/link";
 
 export default function Home() {
-	return (
-		<main className="h-screen bg-[#FFF5EE]">
-			<NavBar />
-			<section className="mx-auto min-h-screen max-w-screen flex items-center justify-center gap-10 px-6 py-20">
-				<div className="max-w-3xl">
-					<h1 className="text-5xl font-semibold tracking-[-0.03em] text-zinc-950 sm:text-6xl">
-						FIND YOUR NEXT HAIRCUT
-					</h1>
-
-					<p className="mt-2 max-w-2xl text-lg leading-8 text-zinc-500">
-						Find a barber. Choose your style. Book your time.
-					</p>
-
-					<div className="mt-6 flex gap-4">
-						<button className="rounded-lg bg-zinc-950 px-6 py-3 font-medium text-white transition hover:bg-zinc-800">
-							Book an appointment
-						</button>
-					</div>
-				</div>
-				<HaircutSlideshow />
-			</section>
-			<BarbersPage />
-			<BookingPage />
-		</main>
-	);
+  return <div className="container page">
+    <div className="notice"><strong>Demonstration only.</strong> Example barbers and prices.
+      No appointments, accounts, payments, or marketing sign-ups are accepted.</div>
+    <section className="hero" aria-labelledby="hero-title">
+      <div>
+        <p className="eyebrow">Barberly booking preview</p>
+        <h1 id="hero-title">Choose a service.<br />Explore your options.</h1>
+        <p>Browse an example catalog and review a service selection before a future booking.</p>
+        <div className="actions">
+          <Link className="button" href="/barbers">Explore example barbers</Link>
+          <Link className="button secondary" href="/book">Preview a booking</Link>
+        </div>
+      </div>
+      <div className="illustration" aria-hidden="true">Cut.<br />Style.<br />Your choice.</div>
+    </section>
+    <section id="how-it-works" aria-labelledby="how-heading" className="prose">
+      <h2 id="how-heading">How this preview works</h2>
+      <ol>
+        <li>Choose an example barber and see their services, duration, and sample price.</li>
+        <li>Select a preferred date and time. These are preferences, not available slots.</li>
+        <li>Review the selection. Nothing is reserved or charged.</li>
+      </ol>
+      <p>We do not ask for your name, phone number, or email in this preview.</p>
+    </section>
+  </div>;
 }

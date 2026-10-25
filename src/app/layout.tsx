@@ -1,34 +1,18 @@
 import type { Metadata } from "next";
-import { Manrope, Playfair_Display } from "next/font/google";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import "./globals.css";
 
-const manrope = Manrope({
-  subsets: ["latin"],
-  variable: "--font-manrope",
-});
-
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-playfair",
-});
-
 export const metadata: Metadata = {
-  title: "Barberly",
-  description: "Find your barber. Choose your style. Book your time.",
+  title: { default: "Barberly | Booking preview", template: "%s | Barberly" },
+  description: "Explore an example barber catalog and preview a service selection. Online booking is not yet available.",
+  robots: { index: false, follow: false },
 };
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en">
-      <body
-        className={`${manrope.variable} ${playfair.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
-  );
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  return <html lang="en"><body>
+    <a className="skip-link" href="#main-content">Skip to main content</a>
+    <Header />
+    <main id="main-content" tabIndex={-1}>{children}</main>
+    <Footer />
+  </body></html>;
 }
